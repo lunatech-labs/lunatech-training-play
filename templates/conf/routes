@@ -4,4 +4,4 @@ GET  /favicon.ico               404
 
 GET  /public/                   staticDir:public
 
-*    /{action}                  Application.{action}
+GET  /{template}                Application.example
