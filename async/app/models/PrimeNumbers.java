@@ -19,6 +19,7 @@ public class PrimeNumbers {
       long primeIndex = 1;
 
       // Loop over candidate prime numbers the index reaches the target index
+      checkingCandidatePrimes:
       for (long candidatePrime = 2; primeIndex <= index; candidatePrime++) {
          boolean prime = true;
 
@@ -28,16 +29,13 @@ public class PrimeNumbers {
 
             // If the factor divides the candidate, then it's not prime.
             if (candidatePrime % factor == 0) {
-               prime = false;
-               break;
+               continue checkingCandidatePrimes;
             }
          }
 
-         // If the candidate is prime, then move on to the next candidate.
-         if (prime) {
-            primeNumber = candidatePrime;
-            primeIndex++;
-         }
+         // We didn't find a factor, so the candidate is prime; move on to the next.
+         primeNumber = candidatePrime;
+         primeIndex++;
       }
 
       return primeNumber;
