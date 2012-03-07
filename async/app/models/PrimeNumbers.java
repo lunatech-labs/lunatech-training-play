@@ -21,7 +21,6 @@ public class PrimeNumbers {
       // Loop over candidate prime numbers the index reaches the target index
       checkingCandidatePrimes:
       for (long candidatePrime = 2; primeIndex <= index; candidatePrime++) {
-         boolean prime = true;
 
          // Loop over possible factors.
          // Optimisation: don't check factors bigger than the square root.
