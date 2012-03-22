@@ -1,0 +1,46 @@
+*{
+    Template syntax examples
+
+    @param person A person’s full name
+    @param primes A list of prime numbers 
+}*
+<!DOCTYPE html>
+<html>
+<head>
+   <title>1.4 - templates</title>
+   <meta charset="${_response_encoding}">
+   <link rel="stylesheet" media="screen" href="@{'/public/main.css'}">
+</head>
+<body>
+
+*{ Expressions }*
+
+<p>Hello ${person}</p>   
+<h1>${person + ' - ' + play.configuration['application.name']}</h1>
+<p>Your home page is at <tt>/users/${person.slugify()}</tt></p>
+   
+*{ Tags }*
+  
+<ol>
+   #{list primes, as:'prime'}
+      #{if String.valueOf(prime).endsWith('1')}
+         <li>${prime}</li>
+      #{/if}
+   #{/list}
+</ol>
+
+*{ List tag variables }*
+
+<p>
+   #{list primes, as:'prime'}
+      <i>p</i><sub>${prime_index}</sub> = ${prime}
+      #{ifnot prime_isLast},#{/ifnot} 
+   #{/list}
+</p>
+
+<p>&{'primes', primes.size()}</p>
+
+<p></p>
+
+</body>
+</html>

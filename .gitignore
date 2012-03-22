@@ -1,7 +1,11 @@
-tmp
-modules
+.classpath
+.project
+.settings
+*.iml
+*.ipr
+*.iws
+eclipse
 lib
 logs
-*.ipr
-*.iml
-*.iws
+modules
+tmp
