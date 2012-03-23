@@ -1,0 +1,15 @@
+#{extends 'main.html' /}
+#{set title:'Prime factorisations' /}
+
+<h1>${title}</h1>
+
+<table>
+<tr><th>n</th><th>Prime</th><th>Factorisation</th></tr>
+#{list numbers, as:'number'}
+<tr>
+   <td>${number.value}</td>
+   <td>#{if number.prime}✓#{/if}</td>
+   <td>${number.primeFactorisation}</td>
+</tr>
+#{/list}
+</table>

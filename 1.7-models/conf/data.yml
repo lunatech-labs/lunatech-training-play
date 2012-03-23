@@ -1,0 +1,95 @@
+models.CompositeNumber(2):
+    value: 2
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(3):
+    value: 3
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(4):
+    value: 4
+    prime: false
+    primeFactorisation: 2²
+
+models.CompositeNumber(5):
+    value: 5
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(6):
+    value: 6
+    prime: false
+    primeFactorisation: 2 × 3
+
+models.CompositeNumber(7):
+    value: 7
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(8):
+    value: 8
+    prime: false
+    primeFactorisation: 2³
+
+models.CompositeNumber(9):
+    value: 9
+    prime: false
+    primeFactorisation: 3³
+
+models.CompositeNumber(10):
+    value: 10
+    prime: false
+    primeFactorisation: 2 × 5
+
+models.CompositeNumber(11):
+    value: 11
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(12):
+    value: 12
+    prime: false
+    primeFactorisation: 2² × 3
+
+models.CompositeNumber(13):
+    value: 13
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(14):
+    value: 14
+    prime: false
+    primeFactorisation: 2 × 7
+
+models.CompositeNumber(15):
+    value: 15
+    prime: false
+    primeFactorisation: 3 × 5
+
+models.CompositeNumber(16):
+    value: 16
+    prime: false
+    primeFactorisation: 2⁴
+
+models.CompositeNumber(17):
+    value: 17
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(18):
+    value: 18
+    prime: false
+    primeFactorisation: 2 × 3³
+
+models.CompositeNumber(19):
+    value: 19
+    prime: true
+    primeFactorisation:
+
+models.CompositeNumber(20):
+    value: 20
+    prime: false
+    primeFactorisation: 2² × 5
+
