@@ -11,5 +11,9 @@ public class Application extends Controller {
       final List<Long> primes = PrimeNumbers.primes(20);
       render(person, primes);
    }
+   
+   public static void form() {
+      render();
+   }
 
 }

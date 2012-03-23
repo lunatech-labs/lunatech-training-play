@@ -8,8 +8,7 @@
 <html>
 <head>
    <title>1.4 - templates</title>
-   <meta charset="${_response_encoding}">
-   <link rel="stylesheet" media="screen" href="@{'/public/main.css'}">
+   #{stylesheet 'main.css'/}
 </head>
 <body>
 
@@ -17,13 +16,13 @@
 
 <p>Hello ${person}</p>   
 <h1>${person + ' - ' + play.configuration['application.name']}</h1>
-<p>Your home page is at <tt>/users/${person.slugify()}</tt></p>
+<p>Your home page is at <tt>/users/${person?.slugify()}</tt></p>
    
 *{ Tags }*
   
 <ol>
    #{list primes, as:'prime'}
-      #{if String.valueOf(prime).endsWith('1')}
+      #{if prime.toString().endsWith('1')}
          <li>${prime}</li>
       #{/if}
    #{/list}
@@ -38,9 +37,13 @@
    #{/list}
 </p>
 
+*{ Message look-up }*
+
 <p>&{'primes', primes.size()}</p>
 
-<p></p>
+*{ Reverse routing }*
+
+<p><a href="@{form()}">HTML form example</a></p>
 
 </body>
 </html>
