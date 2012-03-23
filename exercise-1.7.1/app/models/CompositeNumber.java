@@ -9,7 +9,7 @@ import play.db.jpa.Model;
  * 
  * @see http://en.wikipedia.org/wiki/Integer_factorization
  */
-@Entity
+//@Entity
 public class CompositeNumber extends Model {
 
    public int value;

@@ -9,6 +9,6 @@ import play.test.Fixtures;
 public class Bootstrap extends Job {
 
    public void doJob() {
-      Fixtures.loadModels("data.yml");
+      //Fixtures.loadModels("data.yml");
    }
 }
