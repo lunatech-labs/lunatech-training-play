@@ -14,7 +14,7 @@
 <tr>
    <td>${number.value}</td>
    <td>#{if number.prime}✓#{/if}</td>
-   <td>${number.primeFactorisation}</td>
+   <td>${number.value} = ${number.prime ? number.value + '¹' : number.primeFactorisation}</td>
 </tr>
 #{/list}
 </table>
