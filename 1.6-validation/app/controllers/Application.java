@@ -6,6 +6,7 @@ import models.CompositeNumber;
 
 import org.apache.commons.lang.StringUtils;
 
+import play.Logger;
 import play.data.validation.Valid;
 import play.mvc.Controller;
 
@@ -39,10 +40,23 @@ public class Application extends Controller {
 //      index();
 //   }
 //   
+//   public static void validate(@Valid(message = "That’s not a valid composite") final CompositeNumber number) {
+//      
+//      if (validation.hasErrors()) {
+//         error(400, StringUtils.join(validation.errors(), ", "));
+//      }
+//      
+//      number.save();
+//      index();
+//   }
+//   
    public static void validate(@Valid(message = "That’s not a valid composite") final CompositeNumber number) {
    
       if (validation.hasErrors()) {
-         error(400, StringUtils.join(validation.errors(), ", "));
+         Logger.error(StringUtils.join(validation.errors(), ", "));
+         params.flash();
+         validation.keep();
+         index();
       }
    
       number.save();

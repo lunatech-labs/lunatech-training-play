@@ -12,3 +12,6 @@ p.checkbox { padding-left: 7em; }
 p.checkbox label { font-weight:normal; color:black; width:auto; float:none; }
 p.checkbox label:after { content:''; }
 span.help { font-size:80%; color:gray; }
+.error, .hasError label { color:#900; }
+.hasError input { background-color:#fcc; }
+span.error { font-weight:bold; padding-left: 7em; display:block; }

@@ -26,6 +26,8 @@
   <p class="value">
      <label for="value">Value</label>
      <input id="value" name="number.value">
+     #{ifError 'value'}
+     #{/ifError}
   </p>
   <p class="checkbox">
      <input id="prime" name="number.prime" type="checkbox">
@@ -40,11 +42,20 @@
 
 <h1>Validation</h1>
 
+#{errors}
+  #{if error.key == 'number'}
+    <p class="error">${error}</p>
+  #{/if}
+#{/errors}
+
 #{form @validate()}
-  <p class="value">
+  <p class="value #{errorClass 'number.value'/}">
      <label for="value">Value*</label>
-     <input id="value" name="number.value">
+     <input id="value" name="number.value" value="${flash['number.value']}">
      <span class="help">number, required</span>
+     #{ifError 'number.value'}
+       <span class="error">#{error 'number.value'/}</span>
+     #{/ifError}
   </p>
   <p class="checkbox">
      <input id="prime" name="number.prime" type="checkbox">
