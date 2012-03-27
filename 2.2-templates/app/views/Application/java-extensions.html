@@ -1,0 +1,15 @@
+#{extends 'main.html'/}
+#{set title:'Tags'/}
+
+#{navigation title:title /}
+
+#{heading primes.size() /}
+
+<p>
+  #{list primes, as:'prime'}
+    <span>
+      <i>p</i><sub>${prime_index.index()}</sub> = ${prime}
+      #{ifnot prime_isLast},#{/ifnot}
+    </span>
+  #{/list}  
+</p>
