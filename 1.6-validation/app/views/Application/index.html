@@ -1,0 +1,66 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Hello</h1>
+
+<form action="@{hello()}">
+  <p>
+    <label for="p">Full name</label>
+    <input id="p" name="person">
+    <input type="submit">
+  </p>
+</form>
+
+#{form @hello()}
+  <p>
+    <label for="p2">Full name</label>
+    <input id="p2" name="person">
+    <input type="submit"> (POST request)
+  </p>
+#{/form}
+
+
+<h1>Numbers</h1>
+
+#{form @save()}
+  <p class="value">
+     <label for="value">Value</label>
+     <input id="value" name="number.value">
+  </p>
+  <p class="checkbox">
+     <input id="prime" name="number.prime" type="checkbox">
+     <label for="prime" class="checkbox">prime number?</label>
+  </p>
+  <p>
+     <label for="primeFactorisation">Factorisation</label>
+     <input id="primeFactorisation" name="number.primeFactorisation">
+  </p>
+  <p><button type="submit">Save</button></p>
+#{/form}
+
+<h1>Validation</h1>
+
+#{form @validate()}
+  <p class="value">
+     <label for="value">Value*</label>
+     <input id="value" name="number.value">
+     <span class="help">number, required</span>
+  </p>
+  <p class="checkbox">
+     <input id="prime" name="number.prime" type="checkbox">
+     <label for="prime" class="checkbox">prime number?</label>
+  </p>
+  <p>
+     <label for="primeFactorisation">Factorisation</label>
+     <input id="primeFactorisation" name="number.primeFactorisation">
+  </p>
+  <p><button type="submit">Save</button></p>
+#{/form}
+
+<p>Saved numbers</p>
+<ul>
+#{list numbers, as:'number'}
+<li>${number}</li>
+#{/list}
+</ul>
+
