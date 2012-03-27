@@ -1,9 +1,0 @@
-GET  /                                       Application.index
-GET  /prime/{index}                          Application.prime
-GET  /cached/{index}                         Application.cached
-GET  /suspended/{index}                      Application.suspended
-GET  /parallel/{indices}                     Application.parallel
-
-GET  /favicon.ico                            404
-
-GET  /public/                                staticDir:public

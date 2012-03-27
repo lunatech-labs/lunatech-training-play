@@ -1,7 +1,5 @@
 GET  /                 Application.index
 
-GET  /price/{amount}   Application.price
-
 GET  /favicon.ico                            404
 
 GET  /public/                                staticDir:public

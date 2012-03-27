@@ -13,12 +13,4 @@ public class Application extends Controller {
    public static void index() {
       render();
    }
-
-   public static void price(final Price amount) {
-      renderText(amount.toString());
-   }
-
-   public static void save(final JsonObject amount) {
-      renderText(amount.toString());
-   }
 }
