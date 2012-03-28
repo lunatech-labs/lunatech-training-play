@@ -16,7 +16,7 @@ public class CompositeNumber extends Model {
 
    @Required
    @Min(2)
-   public int value;
+   public Integer value;
    
    public boolean prime;
    public String primeFactorisation;
