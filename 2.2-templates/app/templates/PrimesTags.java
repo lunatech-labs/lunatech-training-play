@@ -30,7 +30,7 @@ public class PrimesTags extends FastTags {
     */
    public static void _heading2(Map<?, ?> args, Closure body, PrintWriter out, ExecutableTemplate template, int line) {
       final String html = "<h1>The first %d prime numbers</h1>";
-      final Integer length = (Integer) (args.containsKey("length") ? args.get("length") : args.get("arg"));
+      final Integer length = (Integer) (args.containsKey("arg") ? args.get("arg") : args.get("length"));
       out.print(String.format(html, length));
    }
 
